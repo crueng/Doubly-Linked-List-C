@@ -6,4 +6,7 @@ set(CMAKE_C_STANDARD 17)
 
 set(SOURCE_FILES main.c)
 
-add_executable(LinkedList main.c)
+add_executable(LinkedList
+        main.c
+        LinkedList.c
+        LinkedList.h)
