@@ -19,6 +19,6 @@ struct LinkedList {
 };
 
 void append(LinkedList* list, char* data);
-void find(LinkedList* list, char* data);
+Node* find(LinkedList* list, char* data);
 void delete(LinkedList* list, char* data);
 void printList(LinkedList* list);

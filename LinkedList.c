@@ -36,9 +36,19 @@ void append(LinkedList* list, char* data)
     head->data = data;
 }
 
-void find(LinkedList* list, char* data)
+Node* find(LinkedList* list, char* data)
 {
-
+    Node* tail = list->_tail;
+    Node* next = tail->_next;
+    while (next != tail)
+    {
+        if (next->data == data)
+        {
+            return next;
+        }
+        next = next->_next;
+    }
+    return NULL;
 }
 
 void delete(LinkedList* list, char* data)

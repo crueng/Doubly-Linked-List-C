@@ -11,8 +11,27 @@ int main(void)
     append(list, "Hello");
     append(list, "World");
     append(list, "Test");
+
+    if (find(list, "Test"))
+    {
+        printf("Found\n");
+    }
+    else
+    {
+        printf("Not Found\n");
+    }
+
     append(list, "Data");
 
     delete(list, "Test");
+
+    if (find(list, "Test"))
+    {
+        printf("Found\n");
+    }
+    else
+    {
+        printf("Not Found\n");
+    }
     printList(list);
 }
