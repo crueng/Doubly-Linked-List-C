@@ -12,5 +12,7 @@ int main(void)
     append(list, "World");
     append(list, "Test");
     append(list, "Data");
+
+    delete(list, "Test");
     printList(list);
 }

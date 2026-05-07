@@ -43,7 +43,19 @@ void find(LinkedList* list, char* data)
 
 void delete(LinkedList* list, char* data)
 {
-
+    Node* tail = list->_tail;
+    Node* next = list->_tail->_next;;
+    while (next != tail)
+    {
+        if (next->data == data)
+        {
+            next->_prev->_next = next->_next;
+            next->_next->_prev = next->_prev;
+            free(next);
+            return;
+        }
+        next = next->_next;
+    }
 }
 
 void printList(LinkedList* list)
