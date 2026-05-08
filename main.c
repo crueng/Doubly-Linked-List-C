@@ -3,14 +3,16 @@
 
 #include "LinkedList.h"
 
+#define CALL(list, func, string) (*func)(list, string);
+
 int main(void)
 {
     LinkedList* list = malloc(sizeof(LinkedList));
     list->_head = NULL;
     list->_tail = NULL;
-    append(list, "Hello");
-    append(list, "World");
-    append(list, "Test");
+    CALL(list, append, "Hello")
+    CALL(list, append, "World")
+    CALL(list, append, "Test")
 
     if (find(list, "Test"))
     {
@@ -21,9 +23,9 @@ int main(void)
         printf("Not Found\n");
     }
 
-    append(list, "Data");
+    CALL(list, append, "Data")
 
-    delete(list, "Test");
+    CALL(list, delete, "Test")
 
     if (find(list, "Test"))
     {
